@@ -1,0 +1,10 @@
+export { default as bg } from './bg.png';
+export { default as bg2 } from './bg2.jpg';
+export { default as bg3 } from './bg3.jpg';
+export { default as mmlTitle } from './MML_Title.png';
+export { default as windowsIcon } from './windows.svg';
+export { default as macIcon } from './apple.svg';
+export { default as linuxIcon } from './linux.svg'; 
+export { default as close } from './close.svg';
+export {default as debianIcon} from './debian.svg';
+export {default as redhatIcon} from './redhat.svg';

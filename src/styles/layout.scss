@@ -1,0 +1,32 @@
+#root {
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden!important;
+}
+
+::-webkit-scrollbar {
+    width: 10px!important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 2px!important;
+}
+
+::-webkit-scrollbar-track {
+    background: #161616;
+    border-radius: 2px!important;
+}
+
+@-moz-document url-prefix() {
+    * {
+        scrollbar-color: #fff #161616;
+        scrollbar-width: thin;
+    }
+}
