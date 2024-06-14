@@ -10,6 +10,7 @@ const Downloads = () => {
   const [macInstaller, setMacInstaller] = useState(null);
   const [linuxDebInstaller, setLinuxDebInstaller] = useState(null);
   const [linuxRpmInstaller, setLinuxRpmInstaller] = useState(null);
+  const [linuxPacmanInstaller, setLinuxPacmanInstaller] = useState(null);
   const [isLinuxModalOpen, setIsLinuxModalOpen] = useState(false);
 
   useEffect(() => {
@@ -23,6 +24,7 @@ const Downloads = () => {
         setMacInstaller(latestRelease.assets.mac);
         setLinuxDebInstaller(latestRelease.assets.linuxDeb);
         setLinuxRpmInstaller(latestRelease.assets.linuxRpm);
+        setLinuxPacmanInstaller(latestRelease.assets.linuxPacman);
       }
     }).catch(error => {
       console.error('Failed to fetch releases:', error);
@@ -70,6 +72,7 @@ const Downloads = () => {
         onClose={() => setIsLinuxModalOpen(false)}
         debUrl={linuxDebInstaller?.downloadUrl}
         rpmUrl={linuxRpmInstaller?.downloadUrl}
+        pacmanUrl={linuxPacmanInstaller?.downloadUrl}
       />
     </div>
   );

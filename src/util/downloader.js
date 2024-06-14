@@ -34,6 +34,12 @@ export async function fetchAllReleases(owner, repo) {
         .map(asset => ({
           name: asset.name,
           downloadUrl: asset.browser_download_url
+        }))[0],
+        linuxPacman: release.assets
+        .filter(asset => asset.name.endsWith('.pacman'))
+        .map(asset => ({
+          name: asset.name,
+          downloadUrl: asset.browser_download_url
         }))[0]
       }
     }));

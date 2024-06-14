@@ -8,3 +8,4 @@ export { default as linuxIcon } from './linux.svg';
 export { default as close } from './close.svg';
 export {default as debianIcon} from './debian.svg';
 export {default as redhatIcon} from './redhat.svg';
+export {default as archIcon} from './arch.svg';

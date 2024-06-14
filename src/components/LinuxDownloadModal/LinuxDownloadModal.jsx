@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../styles/LinuxDownloadModal.scss';
 import Button from '../Button/Button';
-import { close, debianIcon, redhatIcon } from '../../assets/exports';
+import { archIcon, close, debianIcon, redhatIcon } from '../../assets/exports';
 
-const LinuxDownloadModal = ({ isOpen, onClose, debUrl, rpmUrl }) => {
+const LinuxDownloadModal = ({ isOpen, onClose, debUrl, rpmUrl, pacmanUrl }) => {
   if (!isOpen) return null;
 
   return (
@@ -18,6 +18,10 @@ const LinuxDownloadModal = ({ isOpen, onClose, debUrl, rpmUrl }) => {
           {rpmUrl && (
               <Button text={"Installer .rpm"} icon={redhatIcon} onClick={() => window.open(rpmUrl, '_blank')} /> 
           )}
+          {pacmanUrl && (
+              <Button text={"Installer .pacman"} icon={archIcon} onClick={() => window.open(pacmanUrl, '_blank')} /> 
+          )}
+
         </div>
       </div>
     </div>
